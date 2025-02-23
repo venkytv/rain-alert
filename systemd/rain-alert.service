@@ -1,0 +1,11 @@
+[Unit]
+Description=Send rail alerts in the morning
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/venky/src/rain-alert
+ExecStart=/home/venky/.local/bin/uv run rain-alert.py
+User=venky
+Type=oneshot
+RemainAfterExit=no

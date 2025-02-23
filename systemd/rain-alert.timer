@@ -1,0 +1,9 @@
+[Unit]
+Description=Run rain-alert job at 07:30 Europe/London daily
+
+[Timer]
+OnCalendar=Europe/London 07:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
